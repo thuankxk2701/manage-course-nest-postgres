@@ -1,5 +1,6 @@
 import {
   Links,
+  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -12,7 +13,6 @@ import stylesheet from "~/tailwind.css?url";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
 ];
-
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -27,6 +27,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <LiveReload />
       </body>
     </html>
   );
